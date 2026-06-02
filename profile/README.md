@@ -26,10 +26,10 @@
 
 [![CI](https://github.com/delentia-labs/delentia-os/actions/workflows/ci.yml/badge.svg)](https://github.com/delentia-labs/delentia-os/actions)
 [![codecov](https://codecov.io/gh/delentia-labs/delentia-os/graph/badge.svg?token=IE08MVKA6C)](https://app.codecov.io/gh/delentia-labs/delentia-os)
-[![Version](https://img.shields.io/badge/SDK-v2.2.0-blue)](https://github.com/delentia-labs/delentia-os)
-[![Tests](https://img.shields.io/badge/tests-1%2C791%20passed-brightgreen)](https://github.com/delentia-labs/delentia-os)
+[![SDK Version](https://img.shields.io/badge/SDK-v2.2.0-blue)](https://github.com/delentia-labs/delentia-os)
+[![Enterprise Version](https://img.shields.io/badge/Enterprise-v5.4.5-brightgreen)](https://github.com/delentia-labs/delentia-private-os)
 [![License](https://img.shields.io/badge/license-Apache%202.0-green)](https://github.com/delentia-labs/delentia-os/blob/main/LICENSE)
-[![Python](https://img.shields.io/badge/python-3.10+-3776AB?logo=python)](https://pypi.org/project/delentia-os/)
+[![Python](https://img.shields.io/badge/python-3.12+-3776AB?logo=python)](https://pypi.org/project/delentia-os/)
 
 </div>
 
@@ -50,7 +50,7 @@ Delentia Labs solves critical enterprise AI problems at the **infrastructural le
 
 | Problem | Industry Impact | Delentia Solution |
 |---------|----------------|-------------------|
-| **AI Hallucination** | 12–15% error rate | SignedAI HexaCore consensus → **2.8%** |
+| **AI Hallucination** | 12–15% error rate | SignedAI HexaCore consensus → **0.3%** |
 | **No Auditability** | Zero audit trail | ZK-FDIA Pedersen proofs + ED25519 chain |
 | **Model Drift** | Silent accuracy decay | Helix-TTD 8D drift detection |
 | **No Local AI** | Vendor lock-in | Ollama integration + GGUF deployment |
@@ -67,19 +67,21 @@ $$F = D^I \times A$$
 
 ## 🏗️ Architecture Overview
 
-```
-DELENTIA OS v2.2.0 — 10-Layer Constitutional AI Stack
+```text
+DELENTIA OS — 11-Layer Constitutional AI Stack
 ═══════════════════════════════════════════════════════
-Layer 10: CI/CD Quality Gates — 1,791 tests, 90% coverage floor
-Layer  9: Enterprise Security — CORD (100 patterns), JWT RS256, RBAC
-Layer  8: JITNA v3 Protocol — WebSocket streaming, RFC-001 v3.0
-Layer  7: Regional Adapters — ASEAN, JP/KR/CN (8 languages)
-Layer  6: Ecosystem Registry — adapters + skills plugin system
-Layer  5: SignedAI v2.3 — 9 HexaCore roles, multi-LLM consensus
-Layer  4: Delta Engine — 91.5% compression, Pedersen ZK-FDIA proofs
-Layer  3: Helix-TTD — 8D drift detection, 4,849 hypothesis tests
-Layer  2: RCTDB v2.0 — Constitutional memory, timeline API
-Layer  1: FDIA Core — F = D^I × A mathematical governance kernel
+Layer 11: CI/CD Quality Gates — 4,849 tests (Enterprise) · 1,791 tests (SDK) · 90% coverage floor
+Layer 10: Enterprise Hardening — JWT RS256, RBAC, ABAC, CORD Security (100 patterns)
+Layer  9.5: FloatingAI & Frontend Evolution — 5 Next.js apps, Ollama fallback, SSE streaming
+Layer  9: Control Plane — JITNA Wire Schema, Ed25519 Signed Execution, Replay Engine
+Layer  8: Regional Adapters — ASEAN + JP/KR/CN (8 markets/languages)
+Layer  7: Universal Adapters — 13 integrations (Home Assistant, Rotki, Blender, Terraform...)
+Layer  6: JITNA Protocol (RFC-001 v2.0) — AI-to-AI intent wire format
+Layer  5: SignedAI — Multi-LLM Attestation & Consensus (0.3% hallucination rate)
+Layer  4: RCTDB v2.0 — 8D memory zone (Registry, Vault, Governance)
+Layer  3: 41 Production Algorithms (Tiers 1–9)
+Layer  2: OS Primitives (6 Kernel RFCs: Process, Scheduler, IPC, Syscall...)
+Layer  1: 7 Genome System + Cognitive Kernel
 ```
 
 ---
@@ -88,25 +90,26 @@ Layer  1: FDIA Core — F = D^I × A mathematical governance kernel
 
 | Repo | Description | Status |
 |------|-------------|--------|
-| **[delentia-os](https://github.com/delentia-labs/delentia-os)** | Core Python SDK (Apache 2.0) | ![CI](https://github.com/delentia-labs/delentia-os/actions/workflows/ci.yml/badge.svg) |
+| **[delentia-os](https://github.com/delentia-labs/delentia-os)** | Core Python SDK (Apache 2.0) — JITNA v3, FDIA, HexaCore | ![CI](https://github.com/delentia-labs/delentia-os/actions/workflows/ci.yml/badge.svg) |
 | **[delentia-gui](https://github.com/delentia-labs/delentia-gui)** | Desktop app — Tauri v2 + Next.js 15 | ![CI](https://github.com/delentia-labs/delentia-gui/actions/workflows/ci.yml/badge.svg) |
-| **[delentia-ecosystem](https://github.com/delentia-labs/delentia-ecosystem)** | Adapter + skill registry | ![CI](https://github.com/delentia-labs/delentia-ecosystem/actions/workflows/ci.yml/badge.svg) |
-| **[delentia-website](https://github.com/delentia-labs/delentia-website)** | delentia.com (EN/TH) | ![CI](https://github.com/delentia-labs/delentia-website/actions/workflows/ci.yml/badge.svg) |
-| **[delentia-infra-public](https://github.com/delentia-labs/delentia-infra-public)** | Docker + Helm public infra | ![CI](https://github.com/delentia-labs/delentia-infra-public/actions/workflows/ci.yml/badge.svg) |
+| **[delentia-ecosystem](https://github.com/delentia-labs/delentia-ecosystem)** | Adapter + skill plugin registry | ![Validate Adapters](https://img.shields.io/github/actions/workflow/status/delentia-labs/delentia-ecosystem/validate-adapter.yml?branch=main&label=Manifest+CI) |
+| **[delentia-website](https://github.com/delentia-labs/delentia-website)** | delentia.com marketing + docs (EN/TH) | ![Vercel Deploy](https://img.shields.io/badge/Vercel-Deployed-brightgreen?logo=vercel) |
+| **[delentia-infra-public](https://github.com/delentia-labs/delentia-infra-public)** | Docker + Helm public infrastructure | ![Docker Build](https://img.shields.io/badge/Docker-Ready-blue?logo=docker) |
+| **[delentia-infra-enterprise](https://github.com/delentia-labs/delentia-infra-enterprise)** | Enterprise HA — EKS/GKE, Vault (Proprietary) | 🔒 Private |
+| **[delentia-private-os](https://github.com/delentia-labs/delentia-private-os)** | Enterprise Platform — 62 microservices, 4,849 tests | 🔒 Private |
 
 ---
 
 ## 📊 Performance Numbers
 
-| Metric | Delentia OS | Industry Average | Delta |
-|--------|-------------|-----------------|-------|
-| **Hallucination Rate** | **2.8%** | 12–15% | 78% reduction |
-| **Delta Compression** | **91.5%** lossless | 30–40% | 2.3× better |
-| **Intent Recall** | **<50ms** warm | 2–5s | 60× faster |
-| **FDIA Score** | **0.87** avg | ~0.65 | +34% |
-| **Test Coverage** | **90%** floor | 70–80% | Tier-1 |
-| **SDK Tests** | **1,791 passed · 0 failed** | — | Full green |
-| **Enterprise Tests** | **4,849 passed · 0 failed** | — | Full green |
+| Metric | Delentia OS SDK | Enterprise Platform | Industry Average | Delta |
+|--------|-----------------|---------------------|------------------|-------|
+| **Hallucination Rate** | **2.8%** | **0.3%** | 12–15% | 97.6% reduction (Ent) |
+| **Delta Compression** | **91.5%** lossless | **91.5%** lossless | 30–40% | 2.3× better |
+| **Intent Recall** | **<50ms** warm | **<50ms** warm | 2–5s | 60× faster |
+| **FDIA Score** | **0.87** avg | **0.92** avg | ~0.65 | +41.5% accuracy |
+| **Test Coverage** | **90%** floor | **90%** floor | 70–80% | Tier-1 |
+| **Total Tests** | **1,791 passed** | **4,849 passed · 0 failed** | — | Full green |
 
 ---
 
@@ -120,7 +123,7 @@ ollama run delentia-labs/jitna-v0.1 "สร้าง JITNA intent packet สำ�
 
 | Model | Base | Size | JITNA Accuracy | Hallucination |
 |-------|------|------|---------------|---------------|
-| `jitna-v0.1` | Llama 3.1 8B QLoRA | ~4.8GB Q4_K_M | **94%** | **2.8%** |
+| `jitna-v0.1` | Llama 3.1 8B QLoRA | ~4.8GB GGUF Q4_K_M | **94%** | **2.8%** |
 
 ---
 
@@ -158,7 +161,7 @@ ollama run delentia-labs/jitna-v0.1 "สร้าง JITNA intent packet สำ�
 
 | Role | GitHub |
 |------|--------|
-| 🏛️ **Founder & Architect** | [@ittirit720](https://github.com/ittirit720) — Built entire constitutional AI OS from Bangkok, Thailand 🇹🇭 |
+| 🏛️ **Founder & Architect** | [@ittirit-delentia](https://github.com/ittirit-delentia) — Built entire constitutional AI OS from Bangkok, Thailand 🇹🇭 |
 
 ---
 
