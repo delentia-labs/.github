@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 320" width="1280" height="320">
+  <defs>
+    <linearGradient id="bg-dark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#050B14"/>
+      <stop offset="50%" style="stop-color:#081225"/>
+      <stop offset="100%" style="stop-color:#050B14"/>
+    </linearGradient>
+    <linearGradient id="accent-dark" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0066FF"/>
+      <stop offset="50%" style="stop-color:#3B82F6"/>
+      <stop offset="100%" style="stop-color:#60A5FA"/>
+    </linearGradient>
+    <linearGradient id="glow-dark" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0066FF;stop-opacity:0.25"/>
+      <stop offset="100%" style="stop-color:#3B82F6;stop-opacity:0"/>
+    </linearGradient>
+    <filter id="blur-dark">
+      <feGaussianBlur stdDeviation="35"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="320" fill="url(#bg-dark)"/>
+
+  <!-- Glow effect -->
+  <ellipse cx="280" cy="160" rx="350" ry="180" fill="url(#glow-dark)" filter="url(#blur-dark)"/>
+
+  <!-- Tech grid pattern (Left/Center area) -->
+  <g fill="#1E40AF" opacity="0.2">
+    <circle cx="60" cy="60" r="1.5"/><circle cx="120" cy="60" r="1.5"/><circle cx="180" cy="60" r="1.5"/><circle cx="240" cy="60" r="1.5"/>
+    <circle cx="60" cy="120" r="1.5"/><circle cx="120" cy="120" r="1.5"/><circle cx="180" cy="120" r="1.5"/><circle cx="240" cy="120" r="1.5"/>
+    <circle cx="60" cy="180" r="1.5"/><circle cx="120" cy="180" r="1.5"/><circle cx="180" cy="180" r="1.5"/><circle cx="240" cy="180" r="1.5"/>
+    <circle cx="60" cy="240" r="1.5"/><circle cx="120" cy="240" r="1.5"/><circle cx="180" cy="240" r="1.5"/><circle cx="240" cy="240" r="1.5"/>
+  </g>
+
+  <!-- Top accent bar -->
+  <rect x="0" y="0" width="1280" height="5" fill="url(#accent-dark)"/>
+
+  <!-- Logo Icon: Beautiful Vector Delta Symbol (Δ) on the left -->
+  <g transform="translate(80, 55)">
+    <!-- Outer hexagonal tech border -->
+    <polygon points="25,0 75,0 100,43 75,86 25,86 0,43" fill="none" stroke="#0066FF" stroke-width="1.5" opacity="0.4"/>
+    <polygon points="22,-3 78,-3 105,43 78,89 22,89 -5,43" fill="none" stroke="#3B82F6" stroke-dasharray="10, 15" stroke-width="1" opacity="0.6"/>
+    <!-- Central Delta Glyph (Δ) -->
+    <path d="M 50 18 L 80 70 L 20 70 Z" fill="none" stroke="url(#accent-dark)" stroke-width="8" stroke-linejoin="round"/>
+    <path d="M 50 18 L 80 70 L 20 70 Z" fill="none" stroke="#FFFFFF" stroke-width="1.5" opacity="0.9" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="210" y="112" font-family="'Segoe UI', system-ui, sans-serif" font-size="34" font-weight="800" fill="white" letter-spacing="-0.5">Delentia Labs</text>
+  <text x="430" y="104" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="600" fill="#0066FF" letter-spacing="3" opacity="0.9">INTENT-CENTRIC AI OS</text>
+
+  <!-- Tagline / Title -->
+  <text x="210" y="165" font-family="'Segoe UI', system-ui, sans-serif" font-size="18" font-weight="600" fill="#93C5FD">verifiable mathematical governance kernel</text>
+  <text x="210" y="210" font-family="'Segoe UI', system-ui, sans-serif" font-size="44" font-weight="800" fill="url(#accent-dark)" letter-spacing="-1.5">F = D^I × A</text>
+
+  <!-- Tagline footer -->
+  <text x="210" y="255" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" fill="#64748B">Pedersen ZK-FDIA Proofs · JITNA v3 WebSocket Streaming · Helix-TTD 8D Drift</text>
+
+  <!-- Right side panel: 10-Layer Stack -->
+  <rect x="760" y="35" width="460" height="250" rx="14" fill="#030712" stroke="#1E3A8A" stroke-width="1.5" opacity="0.95"/>
+  <rect x="760" y="35" width="460" height="40" rx="14" fill="#1E3A8A" opacity="0.3"/>
+  <rect x="760" y="55" width="460" height="20" fill="#1E3A8A" opacity="0.3"/>
+  <text x="785" y="60" font-family="monospace" font-size="12" font-weight="bold" fill="#60A5FA" letter-spacing="2">DELENTIA OS 10-LAYER STACK</text>
+
+  <!-- Layers -->
+  <text x="785" y="98" font-family="monospace" font-size="11.5" fill="#3B82F6">L10-L8</text>
+  <text x="840" y="98" font-family="monospace" font-size="11.5" fill="#F3F4F6">CI Quality (1,791 tests) · Signed JITNA v3</text>
+
+  <text x="785" y="123" font-family="monospace" font-size="11.5" fill="#3B82F6">L7-L6</text>
+  <text x="840" y="123" font-family="monospace" font-size="11.5" fill="#F3F4F6">Ecosystem Registry · 10+ Channel Adapters</text>
+
+  <text x="785" y="148" font-family="monospace" font-size="11.5" fill="#3B82F6">L5</text>
+  <text x="840" y="148" font-family="monospace" font-size="11.5" fill="#F3F4F6">SignedAI Consensus (2.8% Hallucination)</text>
+
+  <text x="785" y="173" font-family="monospace" font-size="11.5" fill="#3B82F6">L4-L3</text>
+  <text x="840" y="173" font-family="monospace" font-size="11.5" fill="#F3F4F6">Delta Engine (91.5% Comp) · Helix-TTD 8D</text>
+
+  <text x="785" y="198" font-family="monospace" font-size="11.5" fill="#3B82F6">L2-L1</text>
+  <text x="840" y="198" font-family="monospace" font-size="11.5" fill="#3B82F6" font-weight="bold">FDIA core kernel · RCTDB memory loop</text>
+
+  <!-- Safety statement box -->
+  <rect x="785" y="215" width="410" height="52" rx="8" fill="#1E1B4B" stroke="#312E81" stroke-width="1"/>
+  <text x="800" y="235" font-family="monospace" font-size="11.5" fill="#C084FC" font-weight="bold">Verification Gate Status: Active</text>
+  <text x="800" y="252" font-family="monospace" font-size="10.5" fill="#9CA3AF">When Human Gate A = 0, output blocks mathematically.</text>
+
+  <!-- Bottom accent line -->
+  <rect x="0" y="315" width="1280" height="5" fill="url(#accent-dark)"/>
+
+  <!-- Footer text -->
+  <text x="80" y="295" font-family="'Segoe UI', system-ui, sans-serif" font-size="11.5" fill="#475569">© 2026 Delentia Labs · Constitutional AI OS · Bangkok, Thailand 🇹🇭 · delentia.com</text>
+</svg>
