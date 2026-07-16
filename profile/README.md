@@ -4,15 +4,19 @@
   <source media="(prefers-color-scheme: dark)"
     srcset="https://raw.githubusercontent.com/delentia-labs/.github/main/profile/assets/delentia-banner-dark.svg">
   <img src="https://raw.githubusercontent.com/delentia-labs/.github/main/profile/assets/delentia-banner-light.svg"
-    alt="Delentia Labs — The First Intent-Centric AI Operating System" width="100%" />
+    alt="Delentia Labs — Intent-Centric Local AI Operating System" width="100%" />
 </picture>
 
 <br/>
 
 # Δ Delentia Labs
 
-### *The First Intent-Centric AI Operating System*
-### *ระบบปฏิบัติการ AI แบบ Intent-Centric อันดับ 1 ของโลก*
+### *An Experimental Causal-Constraint AI Operating System SDK*
+### *ระบบปฏิบัติการ AI ขนาดเล็กแบบ Local-First เพื่อการทดลองความปลอดภัย*
+
+<br/>
+
+> 💬 **RFC-001 is Live!** We just crossed **5,195 monthly downloads** on Hugging Face. Join our architecture review and help us audit weight-level security constraints in our [GitHub Discussions #58](https://github.com/delentia-labs/Delentia-OS/discussions/58).
 
 <br/>
 
@@ -25,9 +29,9 @@
 <br/>
 
 [![SDK Version](https://img.shields.io/badge/SDK-v2.2.6-blue)](https://github.com/delentia-labs/Delentia-OS)
-[![Enterprise Version](https://img.shields.io/badge/Enterprise-v5.5.0-brightgreen)](https://github.com/delentia-labs/Delentia-Private-OS)
 [![License](https://img.shields.io/badge/license-Apache%202.0-green)](https://github.com/delentia-labs/Delentia-OS/blob/main/LICENSE)
-[![Python](https://img.shields.io/badge/python-3.12+-3776AB?logo=python)](https://pypi.org/project/delentia-os/)
+[![PyPI Downloads](https://img.shields.io/badge/HuggingFace-5.1K_Downloads/mo-yellow)](https://huggingface.co/Delentia/delentia-slm-jitna-v0.4)
+[![Python](https://img.shields.io/badge/python-3.10+-3776AB?logo=python)](https://pypi.org/project/delentia-os/)
 
 <p align="center">
   <a href="#-english">🇺🇸 English Profile</a> •
@@ -41,28 +45,33 @@
 ## 🇺🇸 English
 
 ### Welcome to Delentia Labs
-We are the research and engineering foundation behind **Delentia OS** — pioneering the world's first **Intent-Centric AI Operating System** with built-in constitutional governance, mathematical safety guarantees, and enterprise-grade compliance.
+We are the research and engineering playground behind **Delentia OS** — an experimental, local-first AI Operating System SDK focusing on structural weight-level governance and edge VRAM optimization. 
 
-Delentia Labs solves critical enterprise AI challenges at the **infrastructural level**, not the application layer.
+This is not a commercial enterprise or a venture-backed startup. It is an open-source hobby experiment designed to solve local agent safety at the infrastructural level, rather than relying on brittle prompt rules.
 
-> **"If LangChain is the plumbing for LLMs, then Delentia is the constitution for AI — the layer that mathematically verifies every action before it runs."**
+> **"A hobby experiment in resource constraints: trying to make small local AI models behave safely using mathematical gates instead of prompts."**
 
 ---
 
-### ⚡ The Enterprise AI Problem We Solve
-* **AI Hallucination**: Reduced from 12–15% to **0.3%** using SignedAI HexaCore consensus.
-* **No Auditability**: Secured via ZK-FDIA Pedersen proofs and an ED25519 signature chain.
-* **Model Drift**: Tracked via Helix-TTD 8D topological drift detection.
-* **PDPA/GDPR Compliance**: Enforced natively at runtime.
+### 📝 A Sincere Note from the Solo Creator
 
-Our architecture is mathematically governed by the **FDIA Equation**:
+I have no formal background in Computer Science, and a year ago, I didn't know how to write code. I graduated with a degree in Architecture, majoring in Facilities Management. I am not an AI researcher or a Silicon Valley founder. I am just a solo developer coding from a small desk in an 8-story flat in Bangkok, Thailand.
+
+I wanted to see if I could combine my background in building resource allocation with AI to manage hardware constraints. With a hard limit of 4.9 GB VRAM (coding on a gaming handheld), I built Delentia's **1+N Adapter Swapping** stack. 
+
+The base model card crossed **5,195 downloads last month** on Hugging Face. I honestly do not know if these downloads are bots or real developers, and the system is not yet fully stable in my eyes. I have reached the absolute boundary of what I can figure out alone. I opened this profile and our RFC discussions because I need your advice and engineering criticism to help me learn and make it work.
+
+---
+
+### 🏛️ The FDIA Safety Equation
+The core safety system is governed by a multiplicative gate:
 
 $$F = D^I \times A$$
 
-*   **F (Future)**: The desired agent action / output.
+*   **F (Future)**: The authorized strength of the output.
 *   **D (Data)**: Context quality score (0.0 - 1.0).
-*   **I (Intent)**: Exponent precision (clarity of intent).
-*   **A (Architect)**: Human-in-the-loop gate. **When A = 0, output is mathematically blocked.**
+*   **I (Intent)**: Intent precision (user alignment exponent).
+*   **A (Architect)**: Human veto gate ($A \in \{0, 1\}$). **When A = 0, the next-token probability distribution is mathematically suppressed to absolute zero.**
 
 ---
 
@@ -79,33 +88,28 @@ $$F = D^I \times A$$
 
 ---
 
-### 🤖 Delentia SLM — Local AI (1+4 Pillars)
-Instead of a single monolithic model, Delentia SLM deploys a frozen Base Llama 3.1 8B model with **4 specialized LoRA Adapters** dynamically swapped in VRAM:
-*   **The Router (`slm-jitna-router`)**: Hard sequence classifier for intent routing.
-*   **The Executor (`slm-jitna-agentic`)**: SFT model for structured JSON tool calls.
-*   **The Guardian (`slm-jitna-guardian`)**: Constitutional AI evaluation safety filter.
-*   **The Scribe (`slm-jitna-scribe`)**: Context compression for RAG pipelines.
-
----
-
 ## 🇹🇭 ภาษาไทย
 
 ### ยินดีต้อนรับสู่ Delentia Labs
-พวกเราคือมูลนิธิวิจัยและวิศวกรรมผู้อยู่เบื้องหลัง **Delentia OS** — ผู้บุกเบิกระบบปฏิบัติการ AI แบบ **Intent-Centric** แห่งแรกของโลก มาพร้อมการควบคุมความปลอดภัยเชิงกติกาทางคณิตศาสตร์ และระบบปฏิบัติตามกฎหมายความเป็นส่วนตัว (PDPA/GDPR)
+พวกเราคือค่ายวิจัยและพัฒนาเบื้องหลัง **Delentia OS** — โครงการทดลองสร้างระบบปฏิบัติการ AI ขนาดเล็กแบบ Local-First เพื่อทดลองการควบคุมความปลอดภัยผ่านกติกาคณิตศาสตร์ระดับน้ำหนักโมเดล (Weight-level) และการบริหาร VRAM บนอุปกรณ์พกพา
 
-Delentia Labs แก้ไขปัญหาความเสี่ยงของ AI ในระดับ **โครงสร้างพื้นฐาน (Infrastructural Level)** ไม่ใช่เพียงระดับชั้นแอปพลิเคชัน
+นี่ไม่ใช่โครงการเพื่อการค้าหรือสตาร์ทอัพที่ได้ทุนสนับสนุนก้อนโต แต่คือโปรเจกต์งานอดิเรกโอเพนซอร์สเพื่อแก้ไขความเสี่ยงในระดับ **โครงสร้างพื้นฐาน (Infrastructural Level)** ไม่ใช่ระดับชั้นแอปพลิเคชัน
 
-> **"หาก LangChain คือระบบท่อส่งน้ำของโมเดลภาษาขนาดใหญ่ และ Jan.ai คือหน้าต่างสำหรับรันโมเดลโลคัล  
-> Delentia ก็คือรัฐธรรมนูญควบคุม AI — เลเยอร์คณิตศาสตร์ที่คอยยืนยันสิทธิ์ทุกการกระทำก่อนที่มันจะรันทำงาน"**
+> **"การทดลองส่วนตัวในข้อจำกัดฮาร์ดแวร์: พยายามทำให้โมเดลภาษาขนาดเล็กแบบโลคอลทำงานได้อย่างปลอดภัยด้วยเงื่อนไขทางคณิตศาสตร์แทนการใช้คำสั่ง Prompt"**
 
 ---
 
-### ⚡ ปัญหาที่เราแก้ไขเพื่อความปลอดภัยระดับองค์กร
-* **การลดปัญหาการคิดไปเองของ AI (Hallucination)**: ลดลงจาก 12-15% เหลือเพียง **0.3%** ด้วยมติพหุภาคี SignedAI HexaCore
-* **ระบบการตรวจสอบย้อนกลับ (Auditability)**: รับประกันความปลอดภัยด้วยการลงนามแบบเข้ารหัส ZK-FDIA Pedersen Proofs และ Ed25519
-* **การป้องกันความเบี่ยงเบนของโมเดล (Model Drift)**: ตรวจจับการลดลงของความถูกต้องผ่านระบบ Helix-TTD 8D
-* **PDPA/GDPR Compliance**: บังคับใช้นโยบายสิทธิ์ความมั่นคงโดยอัตโนมัติขณะรันไทม์
+### 🇹🇭 คำสารภาพอันซื่อตรงจากผู้สร้าง
 
+ผมไม่มีวุฒิวิทยาการคอมพิวเตอร์ และเมื่อ 12 เดือนก่อนผมเขียนโค้ดไม่เป็นเลย ผมเป็นเพียงผู้ที่เรียนจบด้านสถาปัตยกรรมศาสตร์ สาขาการจัดการทรัพยากรอาคาร (Facilities Management) ไม่ใช่นักวิจัย AI หรือผู้ก่อตั้งบริษัทในซิลิคอนวัลเลย์ ผมคือคนธรรมดาคนหนึ่งที่นั่งเขียนโค้ดอยู่บนโต๊ะตัวเล็กๆ ในแฟลต 8 ชั้นแถบคลองเตย กรุงเทพมหานคร
+
+ผมอยากลองนำความรู้เรื่องการจัดสรรทรัพยากรและพื้นที่ (Resource Allocation) มาประยุกต์ร่วมกับ AI เพื่อควบคุมข้อจำกัดฮาร์ดแวร์ ภายใต้ VRAM ceiling 4.9 GB (พัฒนาและทดสอบบนเครื่องเกมพกพา ROG Ally X) ผมสร้างสถาปัตยกรรม **1+N Adapter Swapping** สลับโมเดลหน้ากากเฉพาะทางในหน่วยความจำเครื่อง
+
+โมเดลหลักในโครงการนี้มียอดดาวน์โหลดบน Hugging Face กว่า **5,195 ครั้งในเดือนที่ผ่านมา** ซึ่งผมเองก็ไม่ทราบแน่ชัดว่าเป็นบอทหรือนักพัฒนาที่นำไปทดสอบ และระบบในมุมมองของผมยังหยาบและไม่เสถียรเลย ผมมาถึงทางตันที่คนคนเดียวจะเรียนรู้และคิดออกแล้ว ผมจึงเปิดกระทู้เสนอแนวคิดวิจัย (RFC-001) ขึ้นมาเพื่อขอรับฟังคำชี้แนะ คำวิจารณ์ และคำแนะนำเชิงวิศวกรรมจากพี่ๆ และเพื่อนๆ ในวงการทุกท่านเพื่อนำไปพัฒนาต่อครับ
+
+---
+
+### 🏛️ สมการควบคุมความปลอดภัย FDIA
 การประมวลผลถูกกำกับดูแลด้วยคณิตศาสตร์ผ่าน **สมการ FDIA**:
 
 $$F = D^I \times A$$
@@ -113,16 +117,7 @@ $$F = D^I \times A$$
 *   **F (Future)**: ผลลัพธ์คำสั่งการทำงานที่ต้องการของเอเจนต์
 *   **D (Data)**: ค่าระดับคะแนนคุณภาพข้อมูลนำเข้า (0.0 - 1.0)
 *   **I (Intent)**: ความแม่นยำของเจตนา (ตัวยกกำลังขยายสัญญาณข้อมูล)
-*   **A (Architect)**: มนุษย์ควบคุมผ่านเกณฑ์สิทธิ์ **เมื่อ A = 0 ระบบหยุดทำงานทันที**
-
----
-
-### 🤖 ระบบสมองโลคัล (Delentia SLM 1+4 Pillars)
-สถาปัตยกรรมระดับเครื่อง (Edge/Local inference) ของโครงการเปลี่ยนผ่านจากการรันโมเดล monolithic ขนาดใหญ่แบบดั้งเดิมไปสู่สถาปัตยกรรม **1 โมเดลหลัก + 4 แอดแดปเตอร์เฉพาะทาง** ได้แก่:
-1. **The Router** (คัดแยกความต้องการรวดเร็ว)
-2. **The Executor** (เขียนไวยากรณ์ JSON สั่งงานคอมพิวเตอร์)
-3. **The Guardian** (ประเมินความปลอดภัยตามรัฐธรรมนูญ)
-4. **The Scribe** (บีบอัดข้อมูล RAG ประหยัด VRAM สูงสุด 74%)
+*   **A (Architect)**: มนุษย์ควบคุมผ่านเกณฑ์สิทธิ์ **เมื่อ A = 0 สิทธิการประมวลผล Token ถัดไปจะถูกกดน้ำหนักคณิตศาสตร์ให้กลายเป็นศูนย์ทันที**
 
 ---
 
@@ -130,7 +125,7 @@ $$F = D^I \times A$$
 
 | Role / บทบาท | GitHub / รายละเอียด |
 |------|--------|
-| 🏛️ **Founder & Architect** | [@ittirit-delentia](https://github.com/ittirit-delentia) — อิทธิฤทธิ์ แซ่โง้ว (ผู้สร้างสรรค์และวางสถาปัตยกรรมระบบปฏิบัติการ AI ทั้งหมดจากย่านคลองเตย กรุงเทพมหานคร 🇹🇭) |
+| 🏛️ **Founder & Developer** | [@ittirit-delentia](https://github.com/ittirit-delentia) — อิทธิฤทธิ์ แซ่โง้ว (เรียนรู้และทดลองระบบปฏิบัติการ AI ทั้งหมดจากย่านคลองเตย กรุงเทพมหานคร 🇹🇭) |
 
 ---
 
