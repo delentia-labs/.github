@@ -71,7 +71,7 @@ $$F = D^I \times A$$
 *   **F (Future)**: The authorized strength of the output.
 *   **D (Data)**: Context quality score (0.0 - 1.0).
 *   **I (Intent)**: Intent precision (user alignment exponent).
-*   **A (Architect)**: Human veto gate ($A \in \{0, 1\}$). **When A = 0, the next-token probability distribution is mathematically suppressed to absolute zero.**
+*   **A (Architect)**: Human veto gate (A = 0 or 1). **When A = 0, the next-token probability distribution is mathematically suppressed to absolute zero.**
 
 ---
 
@@ -79,7 +79,7 @@ $$F = D^I \times A$$
 
 | Repo | Description | Status |
 |------|-------------|--------|
-| **[Delentia-OS](https://github.com/delentia-labs/Delentia-OS)** | Core Python SDK (Apache 2.0) — JITNA v3, FDIA, HexaCore | ![CI](https://github.com/delentia-labs/Delentia-OS/actions/workflows/ci.yml/badge.svg) |
+| **[Delentia-OS](https://github.com/delentia-labs/Delentia-OS)** | Core Python SDK (Apache 2.0) — JITNA v3, FDIA, HexaCore | ![CI](https://github.com/delentia-labs/Delentia-OS/actions/workflows/ci.yml/badge.svg?branch=main) |
 | **[Delentia-OS-Gui](https://github.com/delentia-labs/Delentia-OS-Gui)** | Desktop app — Tauri v2 + Next.js 15 (Delentia Desk) | ![CI](https://github.com/delentia-labs/Delentia-OS-Gui/actions/workflows/ci.yml/badge.svg) |
 | **[Delentia-AI-SLM](https://github.com/delentia-labs/Delentia-AI-SLM)** | SLM QLoRA fine-tuning factory & Colab notebook | ![License](https://img.shields.io/badge/License-Apache%202.0-green) |
 | **[Delentia-Ecosystem](https://github.com/delentia-labs/Delentia-Ecosystem)** | Plugin & skill manifest registry (LINE, Slack, etc.) | ![Manifest CI](https://img.shields.io/github/actions/workflow/status/delentia-labs/Delentia-Ecosystem/validate-adapter.yml?branch=main&label=Manifest+CI) |
