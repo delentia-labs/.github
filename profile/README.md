@@ -4,38 +4,32 @@
   <source media="(prefers-color-scheme: dark)"
     srcset="https://raw.githubusercontent.com/delentia-labs/.github/main/profile/assets/delentia-banner-dark.svg">
   <img src="https://raw.githubusercontent.com/delentia-labs/.github/main/profile/assets/delentia-banner-light.svg"
-    alt="Delentia Labs — Intent-Centric Local AI Operating System" width="100%" />
+    alt="Delentia Labs: an experimental, self-hosted, intent-centric AI agent runtime" width="100%" />
 </picture>
 
 <br/>
 
 # Δ Delentia Labs
 
-### *An Experimental Causal-Constraint AI Operating System SDK*
-### *ระบบปฏิบัติการ AI ขนาดเล็กแบบ Local-First เพื่อการทดลองความปลอดภัย*
+### *An experimental, self-hosted, intent-centric AI agent runtime*
+### *รันไทม์ AI agent เชิงทดลองแบบ self-hosted ที่ยึดเจตนาของผู้ใช้เป็นศูนย์กลาง*
 
 <br/>
 
-> 💬 **RFC-001 is Live!** We just crossed **5,195 monthly downloads** on Hugging Face. Join our architecture review and help us audit weight-level security constraints in our [GitHub Discussions #58](https://github.com/delentia-labs/Delentia-OS/discussions/58).
-
-<br/>
-
-[![Website](https://img.shields.io/badge/delentia.com-Visit%20Now-0066FF?style=for-the-badge&logo=vercel&logoColor=white)](https://delentia.com)
+[![Website](https://img.shields.io/badge/delentia.com-Visit-0066FF?style=for-the-badge&logo=vercel&logoColor=white)](https://delentia.com)
 &nbsp;
 [![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Delentia-yellow?style=for-the-badge)](https://huggingface.co/Delentia)
-&nbsp;
-[![GitHub Sponsors](https://img.shields.io/github/sponsors/delentia-labs?label=Sponsor%20Us%20%E2%9D%A4%EF%B8%8F&logo=github-sponsors&style=for-the-badge&color=EA4AAA)](https://github.com/sponsors/delentia-labs)
 
 <br/>
 
-[![SDK Version](https://img.shields.io/badge/SDK-v2.2.6-blue)](https://github.com/delentia-labs/Delentia-OS)
+[![PyPI](https://img.shields.io/pypi/v/delentia-os?label=delentia-os)](https://pypi.org/project/delentia-os/)
 [![License](https://img.shields.io/badge/license-Apache%202.0-green)](https://github.com/delentia-labs/Delentia-OS/blob/main/LICENSE)
-[![PyPI Downloads](https://img.shields.io/badge/HuggingFace-5.1K_Downloads/mo-yellow)](https://huggingface.co/Delentia/delentia-slm-jitna-v0.4)
+[![Status](https://img.shields.io/badge/status-experimental-orange)](https://github.com/delentia-labs/Delentia-OS/blob/main/docs/release/RELEASE_LEVELS.md)
 [![Python](https://img.shields.io/badge/python-3.10+-3776AB?logo=python)](https://pypi.org/project/delentia-os/)
 
 <p align="center">
-  <a href="#-english">🇺🇸 English Profile</a> •
-  <a href="#-ภาษาไทย">🇹🇭 ข้อมูลภาษาไทย</a>
+  <a href="#-english">🇺🇸 English</a> •
+  <a href="#-ภาษาไทย">🇹🇭 ภาษาไทย</a>
 </p>
 
 </div>
@@ -44,98 +38,89 @@
 
 ## 🇺🇸 English
 
-### Welcome to Delentia Labs
-We are the research and engineering playground behind **Delentia OS** — an experimental, local-first AI Operating System SDK focusing on structural weight-level governance and edge VRAM optimization. 
+### What Delentia is
 
-This is not a commercial enterprise or a venture-backed startup. It is an open-source hobby experiment designed to solve local agent safety at the infrastructural level, rather than relying on brittle prompt rules.
+Delentia develops an experimental, open-source, self-hosted AI agent runtime centred on the user's intent. Its design draws on **FDIA** and **RCT-7** to structure work, govern actions through implemented policies and signed approvals, and preserve evidence for review. The runtime contains its own agent loop, tools, memory, skills, scheduling and subagents. You choose the model and you run the installation.
 
-> **"A hobby experiment in resource constraints: trying to make small local AI models behave safely using mathematical gates instead of prompts."**
+**Current scope:** public code and scripted mechanism demos, with supervised use on the creator's machine. Evaluation with capable models, comparative ablations and outside reproduction are still ahead. A scripted demo replaces the language model with a fixed program; it shows a mechanism, not a model's ability. Nothing here is a running public service.
 
----
+### Start here
 
-### 📝 A Sincere Note from the Solo Creator
+- Runtime and source: **[Delentia-OS](https://github.com/delentia-labs/Delentia-OS)**
+- The definition in one page, and what is still to be tested: [Current public information](https://github.com/delentia-labs/Delentia-OS/blob/main/docs/public/CURRENT_PUBLIC_INFORMATION_EN.md)
+- Status and release scope: [RELEASE_LEVELS](https://github.com/delentia-labs/Delentia-OS/blob/main/docs/release/RELEASE_LEVELS.md)
+- Try the scripted demo (no model, no API key): [Quick start](https://github.com/delentia-labs/Delentia-OS/blob/main/docs/demo/QUICKSTART_EN.md)
+- Questions and reproduction reports: [Discussions](https://github.com/delentia-labs/Delentia-OS/discussions) · [Issues](https://github.com/delentia-labs/Delentia-OS/issues)
+- Security reports: [SECURITY.md](https://github.com/delentia-labs/Delentia-OS/blob/main/SECURITY.md)
 
-I have no formal background in Computer Science, and a year ago, I didn't know how to write code. I graduated with a degree in Architecture, majoring in Facilities Management. I am not an AI researcher or a Silicon Valley founder. I am just a solo developer coding from a small desk in an 8-story flat in Bangkok, Thailand.
+### The two ideas behind it
 
-I wanted to see if I could combine my background in building resource allocation with AI to manage hardware constraints. With a hard limit of 4.9 GB VRAM (coding on a gaming handheld), I built Delentia's **1+N Adapter Swapping** stack. 
+**FDIA Equation, `F = (D^I) × A`.** The creator's framework: **F**uture (the outcome that actually happens), **D**ata (reality and experience), **I**ntent (the exponent that gives the data direction) and **A**rchitect (the human who designs, decides and answers for the outcome). It has no official expanded name. In the runtime it is read as a score for whether an action is admissible, used together with the owner's policy and signed human approvals. The score alone does not stop an action, and it does not change a model's output.
 
-The base model card crossed **5,195 downloads last month** on Hugging Face. I honestly do not know if these downloads are bots or real developers, and the system is not yet fully stable in my eyes. I have reached the absolute boundary of what I can figure out alone. I opened this profile and our RFC discussions because I need your advice and engineering criticism to help me learn and make it work.
+**RCT-7, Reverse Component Thinking.** A way of working in seven steps: observe, analyze, deconstruct, reason backward from the wanted result, identify the core intent, reconstruct (show the plan before building) and compare the result with the intent (stop and ask when it does not match). This is the design; the runtime implements parts of it, and the [step-by-step status](https://github.com/delentia-labs/Delentia-OS/blob/main/docs/public/RCT7_IMPLEMENTATION_STATUS.md) says which.
 
----
+### Repositories
 
-### 🏛️ The FDIA Safety Equation
-The core safety system is governed by a multiplicative gate:
+| Repo | What it is |
+|------|------------|
+| **[Delentia-OS](https://github.com/delentia-labs/Delentia-OS)** | The agent runtime (Apache 2.0). Also holds the Desk GUI (`apps/gui`), the adapter registry (`plugins/adapters`) and the public deployment files (`deploy/`) |
+| **[delentia-mcp](https://github.com/delentia-labs/delentia-mcp)** | Delentia Guard (a policy filter in front of an MCP server) and six advisory MCP tools on Cloudflare Workers. These serve agents people already use; the Python runtime has its own agent loop. Treat their status separately |
+| **[Delentia-Website](https://github.com/delentia-labs/Delentia-Website)** | The website, delentia.com |
+| Delentia-OS-Gui, Delentia-Ecosystem, Delentia-Infra-Public | Archived. Their content moved into Delentia-OS (`apps/gui`, `plugins/adapters`, `deploy`) |
+| Delentia-AI-SLM, Delentia-Answer-Engine-Test | Archived historical experiments, not maintained as the current runtime |
 
-$$F = D^I \times A$$
-
-*   **F (Future)**: The authorized strength of the output.
-*   **D (Data)**: Context quality score (0.0 - 1.0).
-*   **I (Intent)**: Intent precision (user alignment exponent).
-*   **A (Architect)**: Human veto gate (A = 0 or 1). **When A = 0, the next-token probability distribution is mathematically suppressed to absolute zero.**
-
----
-
-### 📦 Ecosystem Repositories
-
-| Repo | Description | Status |
-|------|-------------|--------|
-| **[Delentia-OS](https://github.com/delentia-labs/Delentia-OS)** | Core Python SDK (Apache 2.0) — JITNA v3, FDIA, HexaCore | ![CI](https://github.com/delentia-labs/Delentia-OS/actions/workflows/ci.yml/badge.svg?branch=main) |
-| **[Delentia-OS-Gui](https://github.com/delentia-labs/Delentia-OS-Gui)** | Desktop app — Tauri v2 + Next.js 15 (Delentia Desk) | ![CI](https://github.com/delentia-labs/Delentia-OS-Gui/actions/workflows/ci.yml/badge.svg) |
-| **[Delentia-AI-SLM](https://github.com/delentia-labs/Delentia-AI-SLM)** | SLM QLoRA fine-tuning factory & Colab notebook | ![License](https://img.shields.io/badge/License-Apache%202.0-green) |
-| **[Delentia-Ecosystem](https://github.com/delentia-labs/Delentia-Ecosystem)** | Plugin & skill manifest registry (LINE, Slack, etc.) | ![Manifest CI](https://img.shields.io/github/actions/workflow/status/delentia-labs/Delentia-Ecosystem/validate-adapter.yml?branch=main&label=Manifest+CI) |
-| **[Delentia-Website](https://github.com/delentia-labs/Delentia-Website)** | Next.js 16 App Router marketing & documentation website | ![Deployed](https://img.shields.io/badge/deployed-delentia.com-brightgreen?logo=vercel) |
-| **[Delentia-Infra-Public](https://github.com/delentia-labs/Delentia-Infra-Public)** | Public Docker Compose & Helm Chart configurations | ![Docker](https://img.shields.io/badge/Docker-%3E%3D24-blue) |
+Earlier repositories, whitepapers and posts record the project's development history; their descriptions may differ from the current implementation. Where they do, the pages linked above are the current reference.
 
 ---
 
 ## 🇹🇭 ภาษาไทย
 
-### ยินดีต้อนรับสู่ Delentia Labs
-พวกเราคือค่ายวิจัยและพัฒนาเบื้องหลัง **Delentia OS** — โครงการทดลองสร้างระบบปฏิบัติการ AI ขนาดเล็กแบบ Local-First เพื่อทดลองการควบคุมความปลอดภัยผ่านกติกาคณิตศาสตร์ระดับน้ำหนักโมเดล (Weight-level) และการบริหาร VRAM บนอุปกรณ์พกพา
+### Delentia คืออะไร
 
-นี่ไม่ใช่โครงการเพื่อการค้าหรือสตาร์ทอัพที่ได้ทุนสนับสนุนก้อนโต แต่คือโปรเจกต์งานอดิเรกโอเพนซอร์สเพื่อแก้ไขความเสี่ยงในระดับ **โครงสร้างพื้นฐาน (Infrastructural Level)** ไม่ใช่ระดับชั้นแอปพลิเคชัน
+Delentia พัฒนา AI agent runtime แบบโอเพนซอร์สและ self-hosted ในเชิงทดลอง โดยยึดเจตนาของผู้ใช้เป็นศูนย์กลาง การออกแบบอาศัย **FDIA** และ **RCT-7** เพื่อจัดโครงงาน กำกับการกระทำด้วยนโยบายและลายเซ็นอนุมัติที่ใช้งานจริง และเก็บหลักฐานไว้ตรวจย้อนหลัง ภายใน runtime มีวงจร agent เครื่องมือ ความจำ ทักษะ การจัดตารางงาน และเอเจนต์ย่อยของตัวเอง ผู้ใช้เลือกโมเดลและดูแลการติดตั้งเอง
 
-> **"การทดลองส่วนตัวในข้อจำกัดฮาร์ดแวร์: พยายามทำให้โมเดลภาษาขนาดเล็กแบบโลคอลทำงานได้อย่างปลอดภัยด้วยเงื่อนไขทางคณิตศาสตร์แทนการใช้คำสั่ง Prompt"**
+**ขอบเขตปัจจุบัน:** มีโค้ดสาธารณะและเดโมกลไกแบบสคริปต์ กับการใช้งานภายใต้การดูแลบนเครื่องของผู้สร้าง การประเมินกับโมเดลที่เก่ง การเปรียบเทียบเชิงทดลอง และการทำซ้ำโดยคนนอก ยังเป็นงานถัดไป เดโมแบบสคริปต์ใช้โปรแกรมกำหนดพฤติกรรมแทนโมเดลภาษา จึงแสดงกลไก ไม่ได้แสดงความสามารถของโมเดล และตอนนี้ยังไม่มีบริการสาธารณะที่เปิดให้ใช้
+
+### เริ่มที่นี่
+
+- Runtime และซอร์สโค้ด: **[Delentia-OS](https://github.com/delentia-labs/Delentia-OS)**
+- นิยามหนึ่งหน้า และสิ่งที่ยังต้องทดสอบ: [ข้อมูลปัจจุบัน](https://github.com/delentia-labs/Delentia-OS/blob/main/docs/public/CURRENT_PUBLIC_INFORMATION_TH.md)
+- สถานะและขอบเขตของแต่ละระดับ: [RELEASE_LEVELS](https://github.com/delentia-labs/Delentia-OS/blob/main/docs/release/RELEASE_LEVELS.md)
+- ลองเดโมแบบสคริปต์ (ไม่ต้องมีโมเดลหรือ API key): [คู่มือเดโมภาษาไทย](https://github.com/delentia-labs/Delentia-OS/blob/main/docs/demo/QUICKSTART_TH.md)
+- คำถามและรายงานการทำซ้ำ: [Discussions](https://github.com/delentia-labs/Delentia-OS/discussions) · [Issues](https://github.com/delentia-labs/Delentia-OS/issues)
+- รายงานช่องโหว่: [SECURITY.md](https://github.com/delentia-labs/Delentia-OS/blob/main/SECURITY.md)
+
+### สองแนวคิดเบื้องหลัง
+
+**FDIA Equation, `F = (D^I) × A`** เป็นกรอบคิดของผู้สร้าง: **F**uture (ผลที่เกิดขึ้นจริง) **D**ata (ความเป็นจริงและประสบการณ์) **I**ntent (ตัวยกกำลังที่ให้ทิศทางแก่ข้อมูล) และ **A**rchitect (มนุษย์ผู้ออกแบบ ตัดสินใจ และรับผิดชอบผล) ยังไม่มีชื่อเต็มทางการ ใน runtime ถูกตีความเป็นคะแนนว่าการกระทำหนึ่งควรได้รับอนุญาตหรือไม่ ใช้ร่วมกับนโยบายของเจ้าของและลายเซ็นอนุมัติของมนุษย์ คะแนนอย่างเดียวไม่ได้หยุดการกระทำ และไม่ได้เปลี่ยนผลลัพธ์ของโมเดล
+
+**RCT-7, Reverse Component Thinking** คือวิธีทำงานเจ็ดขั้น: สังเกต วิเคราะห์ แยกองค์ประกอบ คิดย้อนจากผลที่ต้องการ ระบุเจตนาหลัก ประกอบใหม่ (แสดงแผนก่อนสร้าง) และเทียบผลกับเจตนา (หยุดถามเมื่อไม่ตรง) นี่คือการออกแบบ runtime ทำได้บางส่วน ดู[สถานะรายขั้น](https://github.com/delentia-labs/Delentia-OS/blob/main/docs/public/RCT7_IMPLEMENTATION_STATUS.md)
+
+### Repositories
+
+| Repo | คืออะไร |
+|------|---------|
+| **[Delentia-OS](https://github.com/delentia-labs/Delentia-OS)** | agent runtime (Apache 2.0) รวม Desk GUI (`apps/gui`) ทะเบียน adapter (`plugins/adapters`) และไฟล์ deploy สาธารณะ (`deploy/`) |
+| **[delentia-mcp](https://github.com/delentia-labs/delentia-mcp)** | Delentia Guard (ตัวกรองนโยบายหน้า MCP server) และเครื่องมือ MCP เชิงแนะนำ 6 ตัวบน Cloudflare Workers สำหรับ agent ที่คนใช้อยู่แล้ว runtime ภาษา Python มีวงจร agent ของตัวเอง ให้แยกสถานะกัน |
+| **[Delentia-Website](https://github.com/delentia-labs/Delentia-Website)** | เว็บไซต์ delentia.com |
+| Delentia-OS-Gui, Delentia-Ecosystem, Delentia-Infra-Public | เก็บถาวรแล้ว เนื้อหาย้ายเข้า Delentia-OS (`apps/gui`, `plugins/adapters`, `deploy`) |
+| Delentia-AI-SLM, Delentia-Answer-Engine-Test | การทดลองในอดีตที่เก็บถาวร ไม่ได้ดูแลในฐานะ runtime ปัจจุบัน |
+
+repo เก่า เอกสารขาว และโพสต์ในอดีตบันทึกประวัติการพัฒนา คำอธิบายในนั้นอาจต่างจากการใช้งานปัจจุบัน หากต่างกัน ให้ถือหน้าที่ลิงก์ไว้ข้างบนเป็นข้อมูลปัจจุบัน
 
 ---
 
-### 🇹🇭 คำสารภาพอันซื่อตรงจากผู้สร้าง
+## 👤 Creator / ผู้สร้าง
 
-ผมไม่มีวุฒิวิทยาการคอมพิวเตอร์ และเมื่อ 12 เดือนก่อนผมเขียนโค้ดไม่เป็นเลย ผมเป็นเพียงผู้ที่เรียนจบด้านสถาปัตยกรรมศาสตร์ สาขาการจัดการทรัพยากรอาคาร (Facilities Management) ไม่ใช่นักวิจัย AI หรือผู้ก่อตั้งบริษัทในซิลิคอนวัลเลย์ ผมคือคนธรรมดาคนหนึ่งที่นั่งเขียนโค้ดอยู่บนโต๊ะตัวเล็กๆ ในแฟลต 8 ชั้นแถบคลองเตย กรุงเทพมหานคร
-
-ผมอยากลองนำความรู้เรื่องการจัดสรรทรัพยากรและพื้นที่ (Resource Allocation) มาประยุกต์ร่วมกับ AI เพื่อควบคุมข้อจำกัดฮาร์ดแวร์ ภายใต้ VRAM ceiling 4.9 GB (พัฒนาและทดสอบบนเครื่องเกมพกพา ROG Ally X) ผมสร้างสถาปัตยกรรม **1+N Adapter Swapping** สลับโมเดลหน้ากากเฉพาะทางในหน่วยความจำเครื่อง
-
-โมเดลหลักในโครงการนี้มียอดดาวน์โหลดบน Hugging Face กว่า **5,195 ครั้งในเดือนที่ผ่านมา** ซึ่งผมเองก็ไม่ทราบแน่ชัดว่าเป็นบอทหรือนักพัฒนาที่นำไปทดสอบ และระบบในมุมมองของผมยังหยาบและไม่เสถียรเลย ผมมาถึงทางตันที่คนคนเดียวจะเรียนรู้และคิดออกแล้ว ผมจึงเปิดกระทู้เสนอแนวคิดวิจัย (RFC-001) ขึ้นมาเพื่อขอรับฟังคำชี้แนะ คำวิจารณ์ และคำแนะนำเชิงวิศวกรรมจากพี่ๆ และเพื่อนๆ ในวงการทุกท่านเพื่อนำไปพัฒนาต่อครับ
-
----
-
-### 🏛️ สมการควบคุมความปลอดภัย FDIA
-การประมวลผลถูกกำกับดูแลด้วยคณิตศาสตร์ผ่าน **สมการ FDIA**:
-
-$$F = D^I \times A$$
-
-*   **F (Future)**: ผลลัพธ์คำสั่งการทำงานที่ต้องการของเอเจนต์
-*   **D (Data)**: ค่าระดับคะแนนคุณภาพข้อมูลนำเข้า (0.0 - 1.0)
-*   **I (Intent)**: ความแม่นยำของเจตนา (ตัวยกกำลังขยายสัญญาณข้อมูล)
-*   **A (Architect)**: มนุษย์ควบคุมผ่านเกณฑ์สิทธิ์ **เมื่อ A = 0 สิทธิการประมวลผล Token ถัดไปจะถูกกดน้ำหนักคณิตศาสตร์ให้กลายเป็นศูนย์ทันที**
-
----
-
-## 👥 Team & Creator / ทีมผู้พัฒนา
-
-| Role / บทบาท | GitHub / รายละเอียด |
-|------|--------|
-| 🏛️ **Founder & Developer** | [@ittirit-delentia](https://github.com/ittirit-delentia) — อิทธิฤทธิ์ แซ่โง้ว (เรียนรู้และทดลองระบบปฏิบัติการ AI ทั้งหมดจากย่านคลองเตย กรุงเทพมหานคร 🇹🇭) |
+**Ittirit Saengow (อิทธิฤทธิ์ แซ่โง้ว)**: thinker and creator of Delentia · [@ittirit-delentia](https://github.com/ittirit-delentia)
 
 ---
 
 <div align="center">
 
-**Δ Delentia Labs — Constitutional AI for the Intelligence Age**
+**Δ Delentia Labs: an experimental, self-hosted AI agent runtime, built in the open from Bangkok, Thailand 🇹🇭**
 
-*Building secure, human-governed AI infrastructure from Bangkok, Thailand 🇹🇭*
-
-[![delentia.com](https://img.shields.io/badge/delentia.com-Visit%20Now-0066FF?style=for-the-badge)](https://delentia.com)
+[![delentia.com](https://img.shields.io/badge/delentia.com-Visit-0066FF?style=for-the-badge)](https://delentia.com)
 &nbsp;
 [![🤗 HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20Delentia-yellow?style=for-the-badge)](https://huggingface.co/Delentia)
 
