@@ -42,11 +42,12 @@
 
 Delentia develops an experimental, open-source, self-hosted AI agent runtime centred on the user's intent. Its design draws on **FDIA** and **RCT-7** to structure work, govern actions through implemented policies and signed approvals, and preserve evidence for review. The runtime contains its own agent loop, tools, memory, skills, scheduling and subagents. You choose the model and you run the installation.
 
-**Current scope:** public code and scripted mechanism demos, with supervised use on the creator's machine. Evaluation with capable models, comparative ablations and outside reproduction are still ahead. A scripted demo replaces the language model with a fixed program; it shows a mechanism, not a model's ability. Nothing here is a running public service.
+**Current scope:** public code and scripted mechanism demos, installable on your own computer (`pip install delentia-os`, or a Windows installer; release 2.4.1), with supervised use on the creator's machine. Evaluation with capable models, comparative ablations and outside reproduction are still ahead. A scripted demo replaces the language model with a fixed program; it shows a mechanism, not a model's ability. Nothing here is a running public service.
 
 ### Start here
 
 - Runtime and source: **[Delentia-OS](https://github.com/delentia-labs/Delentia-OS)**
+- Install: `pip install delentia-os` · [Windows installer](https://github.com/delentia-labs/Delentia-OS/releases/latest) (not code-signed yet; check its SHA-256) · [install guide](https://github.com/delentia-labs/Delentia-OS/blob/main/docs/demo/INSTALL_WINDOWS_EN.md)
 - The definition in one page, and what is still to be tested: [Current public information](https://github.com/delentia-labs/Delentia-OS/blob/main/docs/public/CURRENT_PUBLIC_INFORMATION_EN.md)
 - Status and release scope: [RELEASE_LEVELS](https://github.com/delentia-labs/Delentia-OS/blob/main/docs/release/RELEASE_LEVELS.md)
 - Try the scripted demo (no model, no API key): [Quick start](https://github.com/delentia-labs/Delentia-OS/blob/main/docs/demo/QUICKSTART_EN.md)
@@ -79,11 +80,12 @@ Earlier repositories, whitepapers and posts record the project's development his
 
 Delentia พัฒนา AI agent runtime แบบโอเพนซอร์สและ self-hosted ในเชิงทดลอง โดยยึดเจตนาของผู้ใช้เป็นศูนย์กลาง การออกแบบอาศัย **FDIA** และ **RCT-7** เพื่อจัดโครงงาน กำกับการกระทำด้วยนโยบายและลายเซ็นอนุมัติที่ใช้งานจริง และเก็บหลักฐานไว้ตรวจย้อนหลัง ภายใน runtime มีวงจร agent เครื่องมือ ความจำ ทักษะ การจัดตารางงาน และเอเจนต์ย่อยของตัวเอง ผู้ใช้เลือกโมเดลและดูแลการติดตั้งเอง
 
-**ขอบเขตปัจจุบัน:** มีโค้ดสาธารณะและเดโมกลไกแบบสคริปต์ กับการใช้งานภายใต้การดูแลบนเครื่องของผู้สร้าง การประเมินกับโมเดลที่เก่ง การเปรียบเทียบเชิงทดลอง และการทำซ้ำโดยคนนอก ยังเป็นงานถัดไป เดโมแบบสคริปต์ใช้โปรแกรมกำหนดพฤติกรรมแทนโมเดลภาษา จึงแสดงกลไก ไม่ได้แสดงความสามารถของโมเดล และตอนนี้ยังไม่มีบริการสาธารณะที่เปิดให้ใช้
+**ขอบเขตปัจจุบัน:** มีโค้ดสาธารณะและเดโมกลไกแบบสคริปต์ ติดตั้งลงเครื่องของคุณเองได้ (`pip install delentia-os` หรือตัวติดตั้ง Windows รุ่น 2.4.1) กับการใช้งานภายใต้การดูแลบนเครื่องของผู้สร้าง การประเมินกับโมเดลที่เก่ง การเปรียบเทียบเชิงทดลอง และการทำซ้ำโดยคนนอก ยังเป็นงานถัดไป เดโมแบบสคริปต์ใช้โปรแกรมกำหนดพฤติกรรมแทนโมเดลภาษา จึงแสดงกลไก ไม่ได้แสดงความสามารถของโมเดล และตอนนี้ยังไม่มีบริการสาธารณะที่เปิดให้ใช้
 
 ### เริ่มที่นี่
 
 - Runtime และซอร์สโค้ด: **[Delentia-OS](https://github.com/delentia-labs/Delentia-OS)**
+- ติดตั้ง: `pip install delentia-os` · [ตัวติดตั้ง Windows](https://github.com/delentia-labs/Delentia-OS/releases/latest) (ยังไม่ได้ลงนามรหัส ตรวจ SHA-256 ก่อน) · [คู่มือติดตั้ง](https://github.com/delentia-labs/Delentia-OS/blob/main/docs/demo/INSTALL_WINDOWS_TH.md)
 - นิยามหนึ่งหน้า และสิ่งที่ยังต้องทดสอบ: [ข้อมูลปัจจุบัน](https://github.com/delentia-labs/Delentia-OS/blob/main/docs/public/CURRENT_PUBLIC_INFORMATION_TH.md)
 - สถานะและขอบเขตของแต่ละระดับ: [RELEASE_LEVELS](https://github.com/delentia-labs/Delentia-OS/blob/main/docs/release/RELEASE_LEVELS.md)
 - ลองเดโมแบบสคริปต์ (ไม่ต้องมีโมเดลหรือ API key): [คู่มือเดโมภาษาไทย](https://github.com/delentia-labs/Delentia-OS/blob/main/docs/demo/QUICKSTART_TH.md)
